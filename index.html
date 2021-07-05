@@ -18,6 +18,9 @@
         <form>
             <div>
                 <label for="fullname">Full Name </label>
+                <label class="validation-error hide" id="fullNameValidationError">
+                    *This field is required*.
+                </label>
                 <input type="text" name="fullName" id="fullName">
             </div>
             <div>
@@ -29,13 +32,33 @@
                 <input type="text" name="departmentName" id="departmentName">
             </div>
             <div>
-                <label for="currentCGPA">Department </label>
+                <label for="currentCGPA">Current CGPA </label>
                 <input type="text" name="currentCGPA" id="currentCGPA">
             </div>
-            <div>
+            <div class="submit-form">
                 <input type="submit" value="Submit">
             </div>
         </form>
+    </div>
+
+    <br>
+
+    <div class="students-table">
+
+        <table class="student-list" id="studentList">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Student ID</th>
+                    <th>Department</th>
+                    <th>Current CGPA</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
     </div>
 
     <noscript>Enable Javascript on your Browser</noscript>
