@@ -62,3 +62,26 @@ function resetForm() {
     document.getElementById("currentCGPA").value = "";
     selectedRow = null;
 }
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+
+    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("studentId").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("departmentName").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("currentCGPA").value = selectedRow.cells[3].innerHTML;
+}
+
+function onDelete(td) {
+    if (confirm("Are you sure to delete this record ?")) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.fullName;
+    selectedRow.cells[1].innerHTML = formData.studentId;
+    selectedRow.cells[2].innerHTML = formData.departmentName;
+    selectedRow.cells[3].innerHTML = formData.currentCGPA;
+}
