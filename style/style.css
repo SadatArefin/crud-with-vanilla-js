@@ -1,18 +1,28 @@
 body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
+    margin: 0;
+    background-image: url(../img/iut.jpg);
+    background-size: cover;
+    
+}
+  
 header{
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(236,139,62,1) 0%, rgba(245,106,106,1) 50%, rgba(245,174,174,1) 100%);
     text-align: center;
+    margin-bottom: 20px;
 }
 .student-form {
+    background-color: rgba(245, 222, 179,0.5);
     font-weight: bold;
     border-color: chocolate;
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
     margin: auto;
-    width: 50%;
+    width: 30%;
   }
   label.validation-error {
     color: red;
@@ -56,21 +66,23 @@ input[type="submit"]:hover {
   }
 
 .students-table {
+    background-color: rgba(248, 176, 176, 0.5);
     border-style: solid;
     border-color: chocolate;
     padding: 30px;
     margin: auto;
-    width: 70%;
+    width: 60%;
   }
   
   body > table {
-    width: 80%;
+    width: 70%;
   }
   
   table {
     border-collapse: collapse;
   }
   table.student-list {
+    background-color: #e4e4e4;
     width: 100%;
   }
   
