@@ -1,0 +1,25 @@
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+header{
+    text-align: center;
+}
+.student-form {
+    font-weight: bold;
+    border-color: chocolate;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+  }
+  input[type="text"]{
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #c0aeae;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
