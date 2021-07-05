@@ -15,7 +15,7 @@
         <h1> Frontend Form</h1>
     </header>
     <div class="student-form">
-        <form>
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
             <div>
                 <label for="fullname">Full Name </label>
                 <label class="validation-error hide" id="fullNameValidationError">

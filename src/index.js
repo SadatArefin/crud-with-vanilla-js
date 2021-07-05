@@ -19,7 +19,7 @@ function readFormData() {
 }
 
 function insertNewRecord(data) {
-    var table = document.getElementById("employeeList").getElementsByTagName("tbody")[0];
+    var table = document.getElementById("studentList").getElementsByTagName("tbody")[0];
     var newRow = table.insertRow(table.length);
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
@@ -38,23 +38,7 @@ function insertNewRecord(data) {
                          <a onClick="onDelete(this)">Delete</a>`;
 }
 
-function validate() {
-    isValid = true;
-    if (document.getElementById("fullName").value == "") {
-        isValid = false;
-        document.getElementById("fullNameValidationError").classList.remove("hide");
-    }
-    else {
-        isValid = true;
-        if (
-            !document
-                .getElementById("fullNameValidationError")
-                .classList.contains("hide")
-        )
-            document.getElementById("fullNameValidationError").classList.add("hide");
-    }
-    return isValid;
-}
+
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("studentId").value = "";
@@ -72,9 +56,9 @@ function onEdit(td) {
 }
 
 function onDelete(td) {
-    if (confirm("Are you sure to delete this record ?")) {
+    if (confirm("Delete The Record?")) {
         row = td.parentElement.parentElement;
-        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        document.getElementById("studentList").deleteRow(row.rowIndex);
         resetForm();
     }
 }
@@ -84,4 +68,22 @@ function updateRecord(formData) {
     selectedRow.cells[1].innerHTML = formData.studentId;
     selectedRow.cells[2].innerHTML = formData.departmentName;
     selectedRow.cells[3].innerHTML = formData.currentCGPA;
+}
+
+function validate() {
+    isValid = true;
+    if (document.getElementById("fullName").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+    else {
+        isValid = true;
+        if (
+            !document
+                .getElementById("fullNameValidationError")
+                .classList.contains("hide")
+        )
+            document.getElementById("fullNameValidationError").classList.add("hide");
+    }
+    return isValid;
 }

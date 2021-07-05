@@ -82,3 +82,19 @@ input[type="submit"]:hover {
   tr:nth-child(even), table.list thead > tr {
     background-color: #ffd0d0;
   }
+  form div.form-action-buttons {
+    text-align: right;
+  }
+  
+  a {
+    cursor: pointer;
+    text-decoration:none;
+    text-align: center;
+    color: #810000;
+    margin: auto;
+    padding: 3px;
+    border: #252525;
+    background-color: #f59191;
+    border-radius: 3px;
+  }
+  
